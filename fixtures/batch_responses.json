@@ -1,0 +1,96 @@
+{
+  "batch_create_response": {
+    "id": "batch_abc123",
+    "object": "batch",
+    "endpoint": "/v1/chat/completions",
+    "completion_window": "24h",
+    "status": "validating",
+    "errors": null,
+    "created_at": 1678886400,
+    "expires_at": 1678972800,
+    "input_file_id": "file-input_abc123",
+    "output_file_id": null,
+    "error_file_id": null,
+    "final_destination": null
+  },
+  "batch_retrieve_in_progress": {
+    "id": "batch_abc123",
+    "object": "batch",
+    "endpoint": "/v1/chat/completions",
+    "completion_window": "24h",
+    "status": "in_progress",
+    "errors": null,
+    "created_at": 1678886400,
+    "expires_at": 1678972800,
+    "input_file_id": "file-input_abc123",
+    "output_file_id": null,
+    "error_file_id": null,
+    "final_destination": null
+  },
+  "batch_retrieve_completed": {
+    "id": "batch_abc123",
+    "object": "batch",
+    "endpoint": "/v1/chat/completions",
+    "completion_window": "24h",
+    "status": "completed",
+    "errors": null,
+    "created_at": 1678886400,
+    "expires_at": 1678972800,
+    "input_file_id": "file-input_abc123",
+    "output_file_id": "file-output_xyz789",
+    "error_file_id": null,
+    "final_destination": null
+  },
+  "output_file_content": [
+    {
+      "id": "req_1",
+      "custom_id": "prompt-0",
+      "response": {
+        "id": "chatcmpl-mock-1",
+        "object": "chat.completion",
+        "created": 1678886405,
+        "model": "gpt-3.5-turbo",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "Mock response for prompt 0: The capital of France is Paris."
+            },
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 10,
+          "completion_tokens": 7,
+          "total_tokens": 17
+        }
+      }
+    },
+    {
+      "id": "req_2",
+      "custom_id": "prompt-1",
+      "response": {
+        "id": "chatcmpl-mock-2",
+        "object": "chat.completion",
+        "created": 1678886406,
+        "model": "gpt-3.5-turbo",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "Mock response for prompt 1: The highest mountain is Mount Everest."
+            },
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 12,
+          "completion_tokens": 9,
+          "total_tokens": 21
+        }
+      }
+    }
+  ]
+}
